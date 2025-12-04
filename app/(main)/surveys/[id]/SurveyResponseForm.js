@@ -37,11 +37,6 @@ export default function SurveyResponseForm({ survey }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!user) {
-      alert('로그인이 필요합니다');
-      return;
-    }
-
     // 필수 질문 검증
     const unansweredRequired = survey.questions.filter(q => {
       if (!q.is_required) return false;
@@ -197,7 +192,24 @@ export default function SurveyResponseForm({ survey }) {
           </div>
         </div>
 
-        {dday > 0 ? (
+        {!user ? (
+          // 로그인하지 않은 경우
+          <div className={styles.loginRequired}>
+            <div className={styles.loginBox}>
+              <div className={styles.lockIcon}>🔒</div>
+              <h2>로그인이 필요합니다</h2>
+              <p>설문에 응답하려면 로그인해주세요.</p>
+              <div className={styles.loginButtons}>
+                <Button onClick={() => window.location.href = '/login'}>
+                  로그인하기
+                </Button>
+                <Button variant="secondary" onClick={() => window.location.href = '/signup'}>
+                  회원가입하기
+                </Button>
+              </div>
+            </div>
+          </div>
+        ) : dday > 0 ? (
           <form className={styles.responseForm} onSubmit={handleSubmit}>
             {survey.questions.map((question, index) => (
               <div key={question.id} className={styles.questionBox}>
