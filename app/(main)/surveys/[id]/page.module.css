@@ -1,0 +1,236 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.surveyHeader {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.category {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #4CAF50;
+  color: white;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.surveyHeader h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+  color: #999;
+}
+
+.meta .active {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.meta .closed {
+  color: #f44336;
+  font-weight: 600;
+}
+
+.responseForm {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.questionBox {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.questionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.required {
+  color: #f44336;
+  font-size: 20px;
+  margin-left: 4px;
+}
+
+.qNumber {
+  background: #4CAF50;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.optionLabel:hover {
+  background: #f5f5f5;
+  border-color: #4CAF50;
+}
+
+.optionLabel input[type="radio"],
+.optionLabel input[type="checkbox"] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.optionLabel span {
+  font-size: 15px;
+  color: #333;
+}
+
+.textInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.submitSection {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.closedMessage {
+  background: white;
+  padding: 60px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.closedMessage p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.alreadyResponded {
+  background: white;
+  padding: 60px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.alreadyResponded h2 {
+  font-size: 24px;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.alreadyResponded p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.errorMessage {
+  background: white;
+  padding: 60px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.errorMessage h2 {
+  font-size: 24px;
+  color: #f44336;
+  margin-bottom: 15px;
+}
+
+.errorMessage p {
+  font-size: 16px;
+  color: #666;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.backButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.backButton:hover {
+  background: #45a049;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .surveyHeader h1 {
+    font-size: 22px;
+  }
+
+  .questionTitle {
+    font-size: 16px;
+  }
+
+  .alreadyResponded,
+  .errorMessage {
+    padding: 40px 20px;
+  }
+}

@@ -1,0 +1,178 @@
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-color: #4f46e5;
+}
+
+.card.closed {
+  opacity: 0.7;
+  background: #f9fafb;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.category {
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge {
+  background: #10b981;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.titleLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  color: #111827;
+  line-height: 1.4;
+}
+
+.titleLink:hover .title {
+  color: #4f46e5;
+}
+
+.description {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.creator,
+.deadline,
+.responses {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background: #4f46e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #4338ca;
+}
+
+.viewResultButton {
+  background: #10b981;
+}
+
+.viewResultButton:hover {
+  background: #059669;
+}
+
+.closedButton {
+  background: #6b7280;
+  cursor: not-allowed;
+}
+
+.closedButton:hover {
+  background: #6b7280;
+}
+
+.disabledButton {
+  background: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.disabledButton:hover {
+  background: #d1d5db;
+}
+
+.closed .button {
+  background: #6b7280;
+}
+
+.closed .button:hover {
+  background: #4b5563;
+}
+
+.editButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.respondedInfo {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 640px) {
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .info {
+    justify-content: space-between;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+  .editButtons {
+    flex-direction: column;
+  }
+}
